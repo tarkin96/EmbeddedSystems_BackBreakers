@@ -1,0 +1,33 @@
+Joe Hilbert (jhilber@clemson.edu)
+Keven Fuentes (kfuente@clemson.edu)
+Wade King (jwk@clemson.edu)
+
+Git Repository: buffet@buffet.cs.clemson.edu:kfuente/BackBreakers-CPSC4820
+
+Integration Tests:
+	- Running all of the tests can be accomplished by running the function
+	"MainTest()" in the IntegrationTest.ino file. This function is contained
+	in the MainTest.cpp file (from Deliverables/5/Libraries/MainTest library).
+	Make sure to include both the MainTest, RFID, and Speaker libraries found 
+	in /Deliverables/5/Libraries. 
+
+Unit Tests: 
+	- The UnitTests.ino file will run all of the unit tests for both the speaker 
+	and RFID subsystems. Just upload the UnitTests.ino to the launchpads and the
+	unit tests will be run automatically.
+	- Each unit test can be run individually by calling a related function found
+	in UnitTests.ino. You must run a respective testInit() function to intialize
+	a speaker or RFID object for testing. 
+	- Make sure to include the RFID and Speaker libraries found in /Deliverables/5
+	/Libraries. 
+	- To run individual RFID Reader tests, you will need two microcontrollers
+	if you do not have an RFID reader. You may follow the comment-instructions
+	in UnitTests.ino starting at line 240. One MCU will need to uncomment line
+	244 and the other will need to uncomment 247. 
+
+Core Function Explanation :
+	All of these functions are the core of our project and are used in the current alpha implementation. We need to be able to play the sound and signify whether all objects are in the backpack or not and therefore all speaker functions are core to the notification system. And we need to be able to read the tags to do anything meaningful as far as detecting objects that are in the backpack; therefore, all reader functions are core to the project.
+
+Algorithm/Design Element References:
+Reading from reader : http://bildr.org/2011/02/rfid-arduino/
+Playing a melody with speaker : https://www.arduino.cc/en/Tutorial/toneMelody
